@@ -57,6 +57,15 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+            <!-- 仅配置上面的一个，会导致原有的resources目录被忽略，所以还需要将原来的也配置进来 -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
         </resources>
     </build>
 
