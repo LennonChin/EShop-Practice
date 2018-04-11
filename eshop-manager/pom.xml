@@ -16,7 +16,6 @@
         <module>../eshop-manager-pojo</module>
         <module>../eshop-manager-interface</module>
         <module>../eshop-manager-service</module>
-        <module>../eshop-manager-web</module>
     </modules>
 
     <dependencies>

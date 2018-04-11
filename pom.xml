@@ -11,6 +11,7 @@
     <modules>
         <module>eshop-common</module>
         <module>eshop-manager</module>
+        <module>eshop-manager-web</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
