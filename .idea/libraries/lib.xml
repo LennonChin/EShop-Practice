@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/GeneratorSqlmapCustom/lib/mybatis-3.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/GeneratorSqlmapCustom/lib/log4j-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/GeneratorSqlmapCustom/lib/mybatis-generator-core-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/GeneratorSqlmapCustom/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/GeneratorSqlmapCustom/lib/mysql-connector-java-5.1.28-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

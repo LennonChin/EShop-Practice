@@ -1,8 +1,10 @@
 package com.coderap.eshop.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrderShipping {
+public class TbOrderShipping implements Serializable {
+    private static final long serialVersionUID = 5167886992011442766L;
     private String orderId;
 
     private String receiverName;

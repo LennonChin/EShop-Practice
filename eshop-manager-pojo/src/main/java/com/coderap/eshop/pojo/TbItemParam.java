@@ -1,8 +1,10 @@
 package com.coderap.eshop.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItemParam {
+public class TbItemParam implements Serializable {
+    private static final long serialVersionUID = 3922542857191393239L;
     private Long id;
 
     private Long itemCatId;

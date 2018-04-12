@@ -1,6 +1,9 @@
 package com.coderap.eshop.pojo;
 
-public class TbOrderItem {
+import java.io.Serializable;
+
+public class TbOrderItem implements Serializable {
+    private static final long serialVersionUID = 676688888448100105L;
     private String id;
 
     private String itemId;

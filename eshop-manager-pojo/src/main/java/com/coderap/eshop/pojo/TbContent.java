@@ -1,8 +1,10 @@
 package com.coderap.eshop.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbContent {
+public class TbContent implements Serializable {
+    private static final long serialVersionUID = 3852995510769940809L;
     private Long id;
 
     private Long categoryId;

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eshop-common" />
+        <module name="eshop-manager-dao" />
+        <module name="eshop-manager-interface" />
+        <module name="eshop-manager-pojo" />
+        <module name="eshop-manager-service" />
+        <module name="eshop-manager-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eshop-common" target="1.7" />
+      <module name="eshop-manager" target="1.7" />
+      <module name="eshop-manager-dao" target="1.7" />
+      <module name="eshop-manager-interface" target="1.7" />
+      <module name="eshop-manager-pojo" target="1.7" />
+      <module name="eshop-manager-service" target="1.7" />
+      <module name="eshop-manager-web" target="1.7" />
+      <module name="eshop-parent" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
