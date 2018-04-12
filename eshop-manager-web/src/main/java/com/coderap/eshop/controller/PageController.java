@@ -1,5 +1,7 @@
 package com.coderap.eshop.controller;
 
+import com.coderap.eshop.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class PageController {
+
+    @Autowired
+    private ItemService itemService;
 
     @RequestMapping("/")
     public String showIndex() {

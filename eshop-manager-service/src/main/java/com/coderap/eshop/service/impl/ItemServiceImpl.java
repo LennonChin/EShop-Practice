@@ -1,9 +1,12 @@
 package com.coderap.eshop.service.impl;
 
+import com.coderap.eshop.common.pojo.EasyUIDataGridResult;
 import com.coderap.eshop.mapper.TbItemMapper;
 import com.coderap.eshop.pojo.TbItem;
 import com.coderap.eshop.pojo.TbItemExample;
 import com.coderap.eshop.service.ItemService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,5 +44,25 @@ public class ItemServiceImpl implements ItemService {
             return tbItems.get(0);
         }
         return null;
+    }
+
+    @Override
+    /**
+     * @Description: 用于返回商品列表的接口，带有分页功能
+     * @Param: [page, rows]
+     * @return: com.coderap.eshop.common.pojo.EasyUIDataGridResult
+     * @Author: Lennon Chin
+     * @Date: 2018/4/13
+     */
+    public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
+
+        PageHelper.startPage(page, rows);
+        TbItemExample tbItemExample = new TbItemExample();
+        List<TbItem> tbItems = itemMapper.selectByExample(tbItemExample);
+        PageInfo<TbItem> tbItemPageInfo = new PageInfo<>(tbItems);
+        EasyUIDataGridResult easyUIDataGridResult = new EasyUIDataGridResult();
+        easyUIDataGridResult.setTotal(tbItemPageInfo.getTotal());
+        easyUIDataGridResult.setRows(tbItems);
+        return easyUIDataGridResult;
     }
 }
