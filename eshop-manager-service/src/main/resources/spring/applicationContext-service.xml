@@ -29,5 +29,5 @@
     <!-- 使dubbo在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880" />
     <!-- 声明要暴露的服务接口 -->
-    <dubbo:service interface="com.coderap.eshop.service.ItemService" ref="itemServiceImpl" />
+    <dubbo:service interface="com.coderap.eshop.service.ItemService" ref="itemServiceImpl" timeout="600000"/>
 </beans>

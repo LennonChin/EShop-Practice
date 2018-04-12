@@ -24,8 +24,12 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!-- 资源映射 -->
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/js/**" location="/js/" />
+
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="eshop-manager" />
+    <dubbo:application name="eshop-manager-web" />
     <!-- Zookeeper地址 -->
     <dubbo:registry protocol="zookeeper" address="192.168.127.133:2181" />
     <dubbo:reference interface="com.coderap.eshop.service.ItemService" id="itemService" />
