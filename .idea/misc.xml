@@ -8,6 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/fastdfs_client/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

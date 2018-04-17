@@ -62,6 +62,9 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
           <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.2" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.1" />
+          <element id="archive" name="fastdfs_client-1.25.jar">
+            <element id="module-output" name="fastdfs_client" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

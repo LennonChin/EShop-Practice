@@ -12,6 +12,7 @@
         <module name="eshop-manager-pojo" />
         <module name="eshop-manager-service" />
         <module name="eshop-manager-web" />
+        <module name="fastdfs_client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="eshop-manager-service" target="1.7" />
       <module name="eshop-manager-web" target="1.7" />
       <module name="eshop-parent" target="1.7" />
+      <module name="fastdfs_client" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

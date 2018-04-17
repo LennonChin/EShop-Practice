@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/eshop-manager-service/eshop-manager-service.iml" filepath="$PROJECT_DIR$/eshop-manager-service/eshop-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eshop-manager-web/eshop-manager-web.iml" filepath="$PROJECT_DIR$/eshop-manager-web/eshop-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/eshop-parent.iml" filepath="$PROJECT_DIR$/eshop-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastdfs_client/fastdfs_client.iml" filepath="$PROJECT_DIR$/fastdfs_client/fastdfs_client.iml" />
     </modules>
   </component>
 </project>
