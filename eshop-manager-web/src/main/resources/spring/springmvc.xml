@@ -14,6 +14,8 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <!-- 扫描配置文件 -->
+    <context:property-placeholder location="classpath:config/resources.properties"/>
     <!-- 扫描包 -->
     <context:component-scan base-package="com.coderap.eshop.controller" />
     <!-- 注解驱动，包含处理器映射器和处理器适配器 -->
@@ -27,7 +29,14 @@
     <!-- 资源映射 -->
     <mvc:resources mapping="/css/**" location="/css/" />
     <mvc:resources mapping="/js/**" location="/js/" />
-
+    <!-- 定义文件上传解析器 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设定默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="5242880"></property>
+    </bean>
     <!-- 引用dubbo服务 -->
     <dubbo:application name="eshop-manager-web" />
     <!-- Zookeeper地址 -->
