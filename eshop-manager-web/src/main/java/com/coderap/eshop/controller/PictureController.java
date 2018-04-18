@@ -1,7 +1,9 @@
 package com.coderap.eshop.controller;
 
 import com.coderap.eshop.common.utils.FastDFSClient;
+import com.coderap.eshop.common.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,9 +24,9 @@ public class PictureController {
     @Value("${IMAGE_SERVER_BASE_URL}")
     private String IMAGE_SERVER_BASE_URL;
 
-    @RequestMapping("/pic/upload")
+    @RequestMapping(value = "/pic/upload", produces = MediaType.TEXT_HTML_VALUE + ";charset=utf-8")
     @ResponseBody
-    public Map uploadImage(MultipartFile uploadFile) {
+    public String uploadImage(MultipartFile uploadFile) {
 
         try {
             FastDFSClient fastDFSClient = new FastDFSClient("classpath:config/FastDFSClient.conf");
@@ -34,12 +36,12 @@ public class PictureController {
             Map result = new HashMap();
             result.put("error", 0);
             result.put("url", this.IMAGE_SERVER_BASE_URL + fileUrl);
-            return result;
+            return JsonUtils.objectToJson(result);
         } catch (Exception e) {
             Map result = new HashMap();
             result.put("error", 1);
             result.put("message", "上传失败");
-            return result;
+            return JsonUtils.objectToJson(result);
         }
     }
 }
