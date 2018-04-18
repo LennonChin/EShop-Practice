@@ -1,5 +1,6 @@
 package com.coderap.eshop.service;
 
+import com.coderap.eshop.common.pojo.EShopResult;
 import com.coderap.eshop.common.pojo.EasyUIDataGridResult;
 import com.coderap.eshop.pojo.TbItem;
 
@@ -12,4 +13,8 @@ import com.coderap.eshop.pojo.TbItem;
 public interface ItemService {
     TbItem getItemById(long itemId);
     EasyUIDataGridResult getItemList(Integer page, Integer rows);
+    /**
+     * 添加商品
+     **/
+    EShopResult addItem(TbItem tbItem, String desc);
 }
